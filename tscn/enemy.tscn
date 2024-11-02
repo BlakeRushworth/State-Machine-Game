@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://b4f3omnm1ajj2"]
 
 [ext_resource type="Script" path="res://Small_Enemy_Scripts/enemy.gd" id="1_eg1k5"]
-[ext_resource type="Texture2D" uid="uid://bjboiiat2bcrw" path="res://Art/Enemies/bad_guy.jpg" id="1_ggqic"]
+[ext_resource type="Texture2D" uid="uid://c436if55ld8o3" path="res://Art/Enemies/Golem_Full.png" id="2_e04bk"]
 [ext_resource type="Script" path="res://State logic/state_machine.gd" id="3_68xh4"]
 [ext_resource type="Script" path="res://Small_Enemy_Scripts/EnemyIdle.gd" id="4_446xr"]
 [ext_resource type="Script" path="res://Small_Enemy_Scripts/enemyfollow.gd" id="5_lwiwj"]
@@ -13,12 +13,16 @@ size = Vector2(139, 131)
 script = ExtResource("1_eg1k5")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(-4.00002, -9)
-scale = Vector2(0.242, 0.252)
-texture = ExtResource("1_ggqic")
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_e04bk")
+hframes = 9
+vframes = 9
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-4, -9)
+position = Vector2(-4, -7)
+scale = Vector2(0.3, 0.3)
 shape = SubResource("RectangleShape2D_4vdnv")
 
 [node name="State_Machine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]

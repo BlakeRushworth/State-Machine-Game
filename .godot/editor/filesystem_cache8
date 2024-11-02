@@ -1,10 +1,13 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1730528395
+::res://::1730534048
 README.md::TextFile::-1::1730528311::0::1::::<><>::
 ::res://Art/::1730521296
-::res://Art/Enemies/::1730508596
+::res://Art/Enemies/::1730534195
 bad_guy.jpg::CompressedTexture2D::3021049399525619448::1730506463::1730508584::1::::<><>::
+Golem_Armor_Full.png::CompressedTexture2D::7143314282980200275::1730534195::1730534196::1::::<><>::
+Golem_Full.png::CompressedTexture2D::6868017233468616708::1730534148::1730534149::1::::<><>::
 icon.svg::CompressedTexture2D::977392187584609519::1730506463::1730508596::1::::<><>::
+::res://Art/Enemies/Enemy_Single_Golem_Reinforced/::1730534169
 ::res://Art/Player/::1730510596
 ::res://Art/Player/Elementals_Leaf_ranger_Free_v1.0/::1730510597
 leaf_ranger.png::CompressedTexture2D::2658647735547613241::1730510591::1730510597::1::::<><>::
@@ -287,7 +290,7 @@ Elementals_leaf_ranger_288x128_SpriteSheet.png::CompressedTexture2D::85383003944
 projectiles_and_effects_256x128_SpriteSheet.png::CompressedTexture2D::799094241664938588::1730510591::1730510597::1::::<><>::
 ::res://Art/Player/Elementals_Leaf_ranger_Free_v1.0/aseprite/::1730510591
 ::res://Art/Player/Elementals_Leaf_ranger_Free_v1.0/gif_samples/::1730510591
-::res://Art/tileset/::1730521296
+::res://Art/tileset/::1730534048
 example.png::CompressedTexture2D::302015082606173747::1730510128::1730510131::1::::<><>::
 Mountain-Dusk.png::CompressedTexture2D::4704876958476321619::1730521292::1730521296::1::::<><>::
 pixel-art-forest-background-seamless-600nw-2501937379.webp::CompressedTexture2D::1827887485818115872::1730520763::1730520769::1::::<><>::
@@ -305,7 +308,7 @@ EnemyIdle.gd::GDScript::-1::1730519464::0::1::::EnemyIdle<>State<>::
 ::res://State logic/::1730508471
 State.gd::GDScript::-1::1730506463::0::1::::State<>Node<>::
 state_machine.gd::GDScript::-1::1730508335::0::1::::<>Node<>::
-::res://tscn/::1730528130
+::res://tscn/::1730528511
 enemy.tscn::PackedScene::4433944765821108305::1730528130::0::1::::<><>::res://Small_Enemy_Scripts/enemy.gd<>uid://bjboiiat2bcrw::::res://Art/Enemies/bad_guy.jpg<>res://State logic/state_machine.gd<>res://Small_Enemy_Scripts/EnemyIdle.gd<>res://Small_Enemy_Scripts/enemyfollow.gd
 main.tscn::PackedScene::8946327994629951347::1730528130::0::1::::<><>::uid://b3qlfgh70iuqk::::res://Art/tileset/tileset.png<>uid://dbk6h0u8da2os::::res://tscn/player.tscn<>uid://b4f3omnm1ajj2::::res://tscn/enemy.tscn
-player.tscn::PackedScene::7251990745074279594::1730528130::0::1::::<><>::res://Player Scripts/player.gd<>uid://b8bcvvl4l1fc2::::res://Art/tileset/Mountain-Dusk.png<>res://State logic/state_machine.gd<>uid://dtwatbnwnx7fk::::res://Art/Player/Elementals_Leaf_ranger_Free_v1.0/animations/spritesheets/Elementals_leaf_ranger_288x128_SpriteSheet.png<>res://Player Scripts/playerwalk.gd<>res://Player Scripts/PlayerJump.gd<>res://Player Scripts/PlayerIdle.gd<>res://Player Scripts/PlayerFall.gd
+player.tscn::PackedScene::7251990745074279594::1730528511::0::1::::<><>::res://Player Scripts/player.gd<>uid://b8bcvvl4l1fc2::::res://Art/tileset/Mountain-Dusk.png<>res://State logic/state_machine.gd<>uid://dtwatbnwnx7fk::::res://Art/Player/Elementals_Leaf_ranger_Free_v1.0/animations/spritesheets/Elementals_leaf_ranger_288x128_SpriteSheet.png<>res://Player Scripts/playerwalk.gd<>res://Player Scripts/PlayerJump.gd<>res://Player Scripts/PlayerIdle.gd<>res://Player Scripts/PlayerFall.gd
