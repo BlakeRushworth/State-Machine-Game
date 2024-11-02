@@ -1,0 +1,9 @@
+Node
+Camera2D
+AnimationPlayer
+TileMap
+EnemyFollow
+EnemyIdle
+CollisionShape2D
+Sprite2D
+CharacterBody2D

@@ -1,0 +1,16 @@
+res://main.tscn
+res://player.tscn
+res://enemy.tscn
+res://states/EnemyIdle.gd
+res://states/enemyfollow.gd
+res://state_machine.gd
+res://tscn/enemy.tscn
+res://tscn/player.tscn
+res://tscn/main.tscn
+res://Player Scripts/player.gd
+res://Player Scripts/playerwalk.gd
+res://Player Scripts/PlayerJump.gd
+res://Player Scripts/PlayerIdle.gd
+res://Player Scripts/PlayerFall.gd
+res://Small_Enemy_Scripts/enemyfollow.gd
+res://Small_Enemy_Scripts/EnemyIdle.gd
