@@ -16,7 +16,9 @@ func Physics_Update(delta: float):
 	var direction = Input.get_vector("move_left","move_right","none","none").normalized()
 	player.velocity = direction * speed
 	
-	if (Input.is_action_just_pressed("jump") and player.is_on_floor()):
+	if Input.is_action_just_pressed("attack"):
+		Transitioned.emit(self, "PlayerAttack")
+	elif (Input.is_action_just_pressed("jump") and player.is_on_floor()):
 		Transitioned.emit(self, "PlayerJump")
 	elif player.is_on_floor() == false:
 		Transitioned.emit(self, "PlayerFall")

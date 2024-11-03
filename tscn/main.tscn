@@ -475,9 +475,9 @@ layer_2/name = "forground"
 layer_2/tile_data = PackedInt32Array()
 
 [node name="Player" parent="." instance=ExtResource("1_wg32c")]
-position = Vector2(240, 299)
+position = Vector2(51, 288)
 
 [node name="Enemies" type="Node" parent="."]
 
 [node name="Enemy" parent="Enemies" instance=ExtResource("2_aulj7")]
-position = Vector2(452, 286)
+position = Vector2(599, 288)

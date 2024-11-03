@@ -44,6 +44,7 @@ func Physics_Update(_delta: float):
 	var direction = Input.get_vector("move_left","move_right","none","none").normalized()
 	player.velocity.x = direction.x * speed
 	
+	
 	if y_dir == "up":
 		animation_player.play("jumping")
 	else:

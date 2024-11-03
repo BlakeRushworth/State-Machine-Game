@@ -1,3 +1,8 @@
-res://tscn/enemy.tscn
-res://tscn/main.tscn
 res://tscn/player.tscn
+res://tscn/PlayerAttack.gd
+res://Player Scripts/PlayerIdle.gd
+res://tscn/main.tscn
+res://tscn/enemy.tscn
+res://Player Scripts/PlayerFall.gd
+res://Player Scripts/PlayerJump.gd
+res://Player Scripts/playerwalk.gd

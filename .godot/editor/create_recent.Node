@@ -1,6 +1,6 @@
 Node
-Camera2D
 AnimationPlayer
+Camera2D
 TileMap
 EnemyFollow
 EnemyIdle

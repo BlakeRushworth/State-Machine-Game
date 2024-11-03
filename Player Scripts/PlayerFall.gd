@@ -30,8 +30,6 @@ func Physics_Update(delta: float):
 	var direction = Input.get_vector("move_left","move_right","none","none").normalized()
 	player.velocity.x = direction.x * speed
 	
-	
-	
 	if player.is_on_floor():
 		if player.velocity.x != 0:
 			Transitioned.emit(self, "PlayerWalk")

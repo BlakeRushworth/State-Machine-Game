@@ -11,6 +11,12 @@ extends CharacterBody2D
 @onready var sprite : Sprite2D = $Sprite2D
 
 func _physics_process(delta):
+	if velocity.x < 0:
+		$Sprite2D.flip_h = true
+	else:
+		$Sprite2D.flip_h = false
+	
+	#velocity.y += 200
 	move_and_slide()
 
 func _ready():
