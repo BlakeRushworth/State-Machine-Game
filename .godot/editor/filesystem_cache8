@@ -1,6 +1,8 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1730623146
+::res://::1730692735
 README.md::TextFile::-1::1730528311::0::1::::<><>::
+::res://Arrow Script/::1730686637
+arrow.gd::GDScript::-1::1730686637::0::1::::<>Area2D<>::
 ::res://Art/::1730521296
 ::res://Art/Enemies/::1730534196
 bad_guy.jpg::CompressedTexture2D::3021049399525619448::1730506463::1730508584::1::::<><>::
@@ -296,12 +298,12 @@ example.png::CompressedTexture2D::302015082606173747::1730510128::1730510131::1:
 Mountain-Dusk.png::CompressedTexture2D::4704876958476321619::1730521292::1730521296::1::::<><>::
 pixel-art-forest-background-seamless-600nw-2501937379.webp::CompressedTexture2D::1827887485818115872::1730520763::1730520769::1::::<><>::
 tileset.png::CompressedTexture2D::4385415492954331658::1730510098::1730510133::1::::<><>::
-::res://Player Scripts/::1730598610
-player.gd::GDScript::-1::1730515678::0::1::::<>CharacterBody2D<>::
-PlayerFall.gd::GDScript::-1::1730598610::0::1::::PlayerFall<>State<>::
-PlayerIdle.gd::GDScript::-1::1730520127::0::1::::PlayerIdle<>State<>::
-PlayerJump.gd::GDScript::-1::1730519993::0::1::::PlayerJump<>State<>::
-playerwalk.gd::GDScript::-1::1730520127::0::1::::PlayerWalk<>State<>::
+::res://Player Scripts/::1730696138
+player.gd::GDScript::-1::1730696138::0::1::::<>CharacterBody2D<>::
+PlayerFall.gd::GDScript::-1::1730625441::0::1::::PlayerFall<>State<>::
+PlayerIdle.gd::GDScript::-1::1730626459::0::1::::PlayerIdle<>State<>::
+PlayerJump.gd::GDScript::-1::1730625455::0::1::::PlayerJump<>State<>::
+playerwalk.gd::GDScript::-1::1730626459::0::1::::PlayerWalk<>State<>::
 ::res://Small_Enemy_Scripts/::1730598610
 enemy.gd::GDScript::-1::1730597934::0::1::::Enemy<>CharacterBody2D<>::
 enemyfollow.gd::GDScript::-1::1730598610::0::1::::EnemyFollow<>State<>::
@@ -309,7 +311,9 @@ EnemyIdle.gd::GDScript::-1::1730519464::0::1::::EnemyIdle<>State<>::
 ::res://State logic/::1730508471
 State.gd::GDScript::-1::1730506463::0::1::::State<>Node<>::
 state_machine.gd::GDScript::-1::1730508335::0::1::::<>Node<>::
-::res://tscn/::1730613710
-enemy.tscn::PackedScene::4433944765821108305::1730613710::0::1::::<><>::res://Small_Enemy_Scripts/enemy.gd<>uid://c436if55ld8o3::::res://Art/Enemies/Golem_Full.png<>res://State logic/state_machine.gd<>res://Small_Enemy_Scripts/EnemyIdle.gd<>res://Small_Enemy_Scripts/enemyfollow.gd
-main.tscn::PackedScene::8946327994629951347::1730610554::0::1::::<><>::uid://b3qlfgh70iuqk::::res://Art/tileset/tileset.png<>uid://dbk6h0u8da2os::::res://tscn/player.tscn<>uid://b4f3omnm1ajj2::::res://tscn/enemy.tscn
-player.tscn::PackedScene::7251990745074279594::1730610554::0::1::::<><>::res://Player Scripts/player.gd<>uid://b8bcvvl4l1fc2::::res://Art/tileset/Mountain-Dusk.png<>res://State logic/state_machine.gd<>uid://dtwatbnwnx7fk::::res://Art/Player/Elementals_Leaf_ranger_Free_v1.0/animations/spritesheets/Elementals_leaf_ranger_288x128_SpriteSheet.png<>res://Player Scripts/playerwalk.gd<>res://Player Scripts/PlayerJump.gd<>res://Player Scripts/PlayerIdle.gd<>res://Player Scripts/PlayerFall.gd
+::res://tscn/::1730696568
+arrow.tscn::PackedScene::8985600912468927446::1730696568::0::1::::<><>::res://Arrow Script/arrow.gd<>uid://lnc73aruj0cm::::res://Art/Player/Elementals_Leaf_ranger_Free_v1.0/animations/spritesheets/projectiles_and_effects_256x128_SpriteSheet.png
+enemy.tscn::PackedScene::4433944765821108305::1730696568::0::1::::<><>::res://Small_Enemy_Scripts/enemy.gd<>uid://c436if55ld8o3::::res://Art/Enemies/Golem_Full.png<>res://State logic/state_machine.gd<>res://Small_Enemy_Scripts/EnemyIdle.gd<>res://Small_Enemy_Scripts/enemyfollow.gd
+main.tscn::PackedScene::8946327994629951347::1730696567::0::1::::<><>::uid://b3qlfgh70iuqk::::res://Art/tileset/tileset.png<>uid://dbk6h0u8da2os::::res://tscn/player.tscn<>uid://b4f3omnm1ajj2::::res://tscn/enemy.tscn
+player.tscn::PackedScene::7251990745074279594::1730696641::0::1::::<><>::res://Player Scripts/player.gd<>uid://b8bcvvl4l1fc2::::res://Art/tileset/Mountain-Dusk.png<>res://State logic/state_machine.gd<>uid://dtwatbnwnx7fk::::res://Art/Player/Elementals_Leaf_ranger_Free_v1.0/animations/spritesheets/Elementals_leaf_ranger_288x128_SpriteSheet.png<>res://Player Scripts/playerwalk.gd<>res://Player Scripts/PlayerJump.gd<>res://Player Scripts/PlayerIdle.gd<>res://Player Scripts/PlayerFall.gd<>res://tscn/PlayerAttack.gd
+PlayerAttack.gd::GDScript::-1::1730696641::0::1::::PlayerAttack<>State<>::

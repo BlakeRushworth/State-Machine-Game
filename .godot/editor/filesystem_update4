@@ -1,8 +1,16 @@
 res://tscn/player.tscn
+res://Player Scripts/player.gd
 res://tscn/PlayerAttack.gd
-res://Player Scripts/PlayerIdle.gd
 res://tscn/main.tscn
 res://tscn/enemy.tscn
+res://tscn/arrow.tscn
+res://Player Scripts/PlayerAttack.gd
+res://Arrow Script/arrow.gd
+res://Small_Enemy_Scripts/EnemyHit.gd
+res://Small_Enemy_Scripts/EnemyIdle.gd
+res://Small_Enemy_Scripts/enemy.gd
+res://Small_Enemy_Scripts/enemyfollow.gd
 res://Player Scripts/PlayerFall.gd
+res://Player Scripts/PlayerIdle.gd
 res://Player Scripts/PlayerJump.gd
 res://Player Scripts/playerwalk.gd

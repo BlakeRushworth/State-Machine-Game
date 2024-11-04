@@ -7,7 +7,7 @@ class_name PlayerWalk
 var animation_player
 
 func Enter():
-	print("walk")
+	#print("walk")
 	animation_player = get_tree().get_first_node_in_group("animation_player")
 	#print(animation_player)
 

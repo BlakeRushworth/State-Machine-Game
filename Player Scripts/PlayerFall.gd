@@ -20,7 +20,7 @@ func fall():
 	player.velocity.y = fall_gravity
 
 func Enter():
-	print("fall")
+	#print("fall")
 	animation_player = get_tree().get_first_node_in_group("animation_player")
 
 func Physics_Update(delta: float):

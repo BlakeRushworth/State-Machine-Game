@@ -31,7 +31,7 @@ func jump():
 
 
 func Enter():
-	print("jump")
+	#print("jump")
 	jump()
 	animation_player = get_tree().get_first_node_in_group("animation_player")
 

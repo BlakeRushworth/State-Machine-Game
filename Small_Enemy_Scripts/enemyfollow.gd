@@ -8,6 +8,7 @@ var animation_player
 var player: CharacterBody2D
 
 func Enter():
+	print("emeny walk")
 	player = get_tree().get_first_node_in_group("Player")
 	animation_player = get_tree().get_first_node_in_group("animation")
 
@@ -37,3 +38,8 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+
+
+func _on_hitbox_area_entered(area):
+	if area.is_in_group("arrow"):
+		Transitioned.emit(self, "EnemyHit")
