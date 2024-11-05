@@ -1,0 +1,2 @@
+extends State
+class_name Ranged_Enemy_Hit

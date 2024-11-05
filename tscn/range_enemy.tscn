@@ -1,0 +1,157 @@
+[gd_scene load_steps=16 format=3 uid="uid://dxvelshx3c4lr"]
+
+[ext_resource type="Script" path="res://Range Enemy Scripts/range_enemy.gd" id="1_f7yt2"]
+[ext_resource type="Texture2D" uid="uid://gqccjw57wvip" path="res://Art/Enemies/Enemy_Single_Golem_Reinforced/imgonline-com-ua-twotoone-HzbCWJtkUIjQ2.png" id="1_yod5q"]
+[ext_resource type="Script" path="res://State logic/state_machine.gd" id="2_moi5s"]
+[ext_resource type="Script" path="res://Range Enemy Scripts/Ranged_Enemy_Walk.gd" id="3_323gg"]
+[ext_resource type="Script" path="res://Range Enemy Scripts/Ranged_Enemy_Idle.gd" id="4_2040e"]
+[ext_resource type="Script" path="res://Range Enemy Scripts/Ranged_Enemy_Hit.gd" id="5_ipu0e"]
+[ext_resource type="Script" path="res://Range Enemy Scripts/Ranged_Enemy_Shoot.gd" id="6_junl4"]
+
+[sub_resource type="Animation" id="Animation_xot1m"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(1, 13)]
+}
+
+[sub_resource type="Animation" id="Animation_7jmqx"]
+resource_name = "death"
+length = 1.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(7, 6), Vector2i(8, 6), Vector2i(0, 7), Vector2i(1, 7), Vector2i(2, 7), Vector2i(3, 7), Vector2i(4, 7), Vector2i(5, 7), Vector2i(6, 7), Vector2i(7, 7), Vector2i(8, 7), Vector2i(0, 8), Vector2i(1, 8)]
+}
+
+[sub_resource type="Animation" id="Animation_bbkpr"]
+resource_name = "hit"
+length = 1.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(7, 13), Vector2i(0, 14), Vector2i(1, 14), Vector2i(2, 14), Vector2i(3, 14), Vector2i(4, 14), Vector2i(5, 14), Vector2i(6, 14)]
+}
+
+[sub_resource type="Animation" id="Animation_f13f4"]
+resource_name = "idle"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 9), Vector2i(1, 9), Vector2i(2, 9), Vector2i(3, 9)]
+}
+
+[sub_resource type="Animation" id="Animation_d20ac"]
+resource_name = "shoot"
+length = 1.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(4, 12), Vector2i(5, 12), Vector2i(6, 12), Vector2i(7, 12), Vector2i(0, 13), Vector2i(1, 13), Vector2i(2, 13), Vector2i(3, 13), Vector2i(4, 13)]
+}
+
+[sub_resource type="Animation" id="Animation_f5bap"]
+resource_name = "walk"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(1, 13), Vector2i(2, 13), Vector2i(3, 13), Vector2i(4, 13)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2pd7o"]
+_data = {
+"RESET": SubResource("Animation_xot1m"),
+"death": SubResource("Animation_7jmqx"),
+"hit": SubResource("Animation_bbkpr"),
+"idle": SubResource("Animation_f13f4"),
+"shoot": SubResource("Animation_d20ac"),
+"walk": SubResource("Animation_f5bap")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8hcio"]
+size = Vector2(25, 25)
+
+[node name="Range_Enemy" type="CharacterBody2D"]
+script = ExtResource("1_f7yt2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." groups=["ranged_animation"]]
+libraries = {
+"": SubResource("AnimationLibrary_2pd7o")
+}
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_yod5q")
+hframes = 9
+vframes = 16
+frame = 118
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 1.5)
+shape = SubResource("RectangleShape2D_8hcio")
+
+[node name="State_Machine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+script = ExtResource("2_moi5s")
+initial_state = NodePath("Idle")
+
+[node name="Idle" type="Node" parent="State_Machine" node_paths=PackedStringArray("enemy")]
+script = ExtResource("4_2040e")
+enemy = NodePath("../..")
+
+[node name="Walk" type="Node" parent="State_Machine"]
+script = ExtResource("3_323gg")
+
+[node name="Hit" type="Node" parent="State_Machine"]
+script = ExtResource("5_ipu0e")
+
+[node name="Shoot" type="Node" parent="State_Machine"]
+script = ExtResource("6_junl4")

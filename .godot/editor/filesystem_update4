@@ -1,16 +1,14 @@
-res://tscn/player.tscn
-res://Player Scripts/player.gd
-res://tscn/PlayerAttack.gd
+res://Range Enemy Scripts/range_enemy.tscn
+res://tscn/range_enemy.tscn
+res://Range Enemy Scripts/Ranged_Enemy_Hit.gd
+res://Range Enemy Scripts/Ranged_Enemy_Shoot.gd
+res://tscn/Ranged_Enemy_Walk.gd
+res://Range Enemy Scripts/Range_Enemy_Idle.gd
 res://tscn/main.tscn
+res://tscn/player.tscn
 res://tscn/enemy.tscn
 res://tscn/arrow.tscn
-res://Player Scripts/PlayerAttack.gd
-res://Arrow Script/arrow.gd
-res://Small_Enemy_Scripts/EnemyHit.gd
-res://Small_Enemy_Scripts/EnemyIdle.gd
-res://Small_Enemy_Scripts/enemy.gd
-res://Small_Enemy_Scripts/enemyfollow.gd
-res://Player Scripts/PlayerFall.gd
-res://Player Scripts/PlayerIdle.gd
-res://Player Scripts/PlayerJump.gd
-res://Player Scripts/playerwalk.gd
+res://Range Enemy Scripts/range_enemy.gd
+res://Range Enemy Scripts/Ranged_Enemy_Idle.gd
+res://Range Enemy Scripts/Ranged_Enemy_Walk.gd
+res://State logic/state_machine.gd

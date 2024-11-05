@@ -11,6 +11,7 @@ var arrow = preload("res://tscn/arrow.tscn")
 
 var Marker2d
 var animation_player
+var healthbar
 var cooldown := 1.6
 var once = false
 
@@ -24,7 +25,7 @@ func Enter():
 	animation_player.play("attack")
 	await get_tree().create_timer(cooldown/2).timeout
 	shoot()
-	#await get_tree().create_timer(cooldown/2).timeout
+	await get_tree().create_timer(cooldown/2).timeout
 	cooldown_done()
 
 

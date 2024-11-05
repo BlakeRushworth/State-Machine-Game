@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dbk6h0u8da2os"]
+[gd_scene load_steps=22 format=3 uid="uid://dbk6h0u8da2os"]
 
 [ext_resource type="Script" path="res://Player Scripts/player.gd" id="1_w538t"]
 [ext_resource type="Texture2D" uid="uid://b8bcvvl4l1fc2" path="res://Art/tileset/Mountain-Dusk.png" id="2_a4rl6"]
@@ -9,6 +9,9 @@
 [ext_resource type="Script" path="res://Player Scripts/PlayerIdle.gd" id="6_etkn7"]
 [ext_resource type="Script" path="res://Player Scripts/PlayerFall.gd" id="7_hjd5f"]
 [ext_resource type="Script" path="res://Player Scripts/PlayerAttack.gd" id="9_liyli"]
+[ext_resource type="Texture2D" uid="uid://dn7c4kewjniqf" path="res://Art/Healthbar/pixil-frame-0 (31).png" id="10_eptgh"]
+[ext_resource type="Texture2D" uid="uid://cj5ntso3jkece" path="res://Art/Healthbar/pixil-frame-0 (6).png" id="10_esi2t"]
+[ext_resource type="Texture2D" uid="uid://d1120wfm1i34r" path="res://Art/Healthbar/pixil-frame-0 (7).png" id="11_5ccu7"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xi340"]
 radius = 1.0
@@ -120,6 +123,10 @@ _data = {
 "walk": SubResource("Animation_6koay")
 }
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hl7yt"]
+radius = 7.0
+height = 34.0
+
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_w538t")
 
@@ -190,3 +197,27 @@ libraries = {
 
 [node name="Marker2D" type="Marker2D" parent="." groups=["marker"]]
 position = Vector2(1, -13)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+scale = Vector2(3, 3)
+transform = Transform2D(3, 0, 0, 3, 0, 0)
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer" groups=["healthbar"]]
+texture_filter = 1
+offset_left = 1.66667
+offset_top = -54.3333
+offset_right = 102.667
+offset_bottom = 129.667
+value = 100.0
+texture_under = ExtResource("10_eptgh")
+texture_over = ExtResource("10_esi2t")
+texture_progress = ExtResource("11_5ccu7")
+
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(1, -11)
+shape = SubResource("CapsuleShape2D_hl7yt")
+
+[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
+[connection signal="area_exited" from="Hitbox" to="." method="_on_hitbox_area_exited"]

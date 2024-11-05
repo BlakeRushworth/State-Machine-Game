@@ -21,6 +21,7 @@ folder_colors={
 "res://Arrow Script/": "red",
 "res://Art/": "yellow",
 "res://Player Scripts/": "blue",
+"res://Range Enemy Scripts/": "green",
 "res://Small_Enemy_Scripts/": "orange",
 "res://State logic/": "teal"
 }
