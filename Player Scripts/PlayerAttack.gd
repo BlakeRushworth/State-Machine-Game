@@ -5,8 +5,7 @@ class_name PlayerAttack
 @export var speed := 100.0
 @export var player: CharacterBody2D
 
-var bow_equipped = true
-var bow_cooldown = true
+
 var arrow = preload("res://tscn/arrow.tscn")
 
 var Marker2d

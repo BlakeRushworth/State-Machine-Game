@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dxvelshx3c4lr"]
+[gd_scene load_steps=17 format=3 uid="uid://dxvelshx3c4lr"]
 
 [ext_resource type="Script" path="res://Range Enemy Scripts/range_enemy.gd" id="1_f7yt2"]
 [ext_resource type="Texture2D" uid="uid://gqccjw57wvip" path="res://Art/Enemies/Enemy_Single_Golem_Reinforced/imgonline-com-ua-twotoone-HzbCWJtkUIjQ2.png" id="1_yod5q"]
@@ -25,7 +25,8 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_7jmqx"]
 resource_name = "death"
-length = 1.4
+length = 1.2
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -33,10 +34,10 @@ tracks/0/path = NodePath("Sprite2D:frame_coords")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [Vector2i(7, 6), Vector2i(8, 6), Vector2i(0, 7), Vector2i(1, 7), Vector2i(2, 7), Vector2i(3, 7), Vector2i(4, 7), Vector2i(5, 7), Vector2i(6, 7), Vector2i(7, 7), Vector2i(8, 7), Vector2i(0, 8), Vector2i(1, 8)]
+"values": [Vector2i(1, 15), Vector2i(2, 15), Vector2i(3, 15), Vector2i(4, 15), Vector2i(5, 15), Vector2i(6, 15), Vector2i(6, 7), Vector2i(7, 7), Vector2i(8, 7), Vector2i(0, 8), Vector2i(1, 8)]
 }
 
 [sub_resource type="Animation" id="Animation_bbkpr"]
@@ -76,7 +77,6 @@ tracks/0/keys = {
 [sub_resource type="Animation" id="Animation_d20ac"]
 resource_name = "shoot"
 length = 1.1
-loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -120,8 +120,12 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8hcio"]
 size = Vector2(25, 25)
 
-[node name="Range_Enemy" type="CharacterBody2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8a7ml"]
+size = Vector2(25, 25)
+
+[node name="Range_Enemy" type="CharacterBody2D" node_paths=PackedStringArray("enemy")]
 script = ExtResource("1_f7yt2")
+enemy = NodePath(".")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." groups=["ranged_animation"]]
 libraries = {
@@ -147,11 +151,29 @@ initial_state = NodePath("Idle")
 script = ExtResource("4_2040e")
 enemy = NodePath("../..")
 
-[node name="Walk" type="Node" parent="State_Machine"]
+[node name="Walk" type="Node" parent="State_Machine" node_paths=PackedStringArray("enemy")]
 script = ExtResource("3_323gg")
+enemy = NodePath("../..")
+min_dist = 90.0
+max_dist = 110.0
 
-[node name="Hit" type="Node" parent="State_Machine"]
+[node name="Hit" type="Node" parent="State_Machine" node_paths=PackedStringArray("enemy")]
 script = ExtResource("5_ipu0e")
+enemy = NodePath("../..")
 
-[node name="Shoot" type="Node" parent="State_Machine"]
+[node name="Shoot" type="Node" parent="State_Machine" node_paths=PackedStringArray("enemy")]
 script = ExtResource("6_junl4")
+enemy = NodePath("../..")
+
+[node name="Hitbox" type="Area2D" parent="." groups=["enemy"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(0.5, 1.5)
+shape = SubResource("RectangleShape2D_8a7ml")
+
+[node name="Marker2D" type="Marker2D" parent="." groups=["enemy_marker"]]
+position = Vector2(2, -2)
+
+[connection signal="area_entered" from="Hitbox" to="State_Machine/Idle" method="_on_hitbox_area_entered"]
+[connection signal="area_entered" from="Hitbox" to="State_Machine/Walk" method="_on_hitbox_area_entered"]
+[connection signal="area_entered" from="Hitbox" to="State_Machine/Shoot" method="_on_hitbox_area_entered"]

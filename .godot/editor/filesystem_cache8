@@ -1,8 +1,9 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1730800205
+::res://::1730961244
 README.md::TextFile::-1::1730528311::0::1::::<><>::
-::res://Arrow Script/::1730698470
-arrow.gd::GDScript::-1::1730698470::0::1::::<>Area2D<>::
+::res://Arrow Script/::1730859080
+arrow.gd::GDScript::-1::1730859080::0::1::::<>Area2D<>::
+bullet.gd::GDScript::-1::1730967528::0::1::::<>Area2D<>::
 ::res://Art/::1730785305
 imgonline-com-ua-twotoone-K1BbslHnwB6OG.jpg::CompressedTexture2D::1826142414611840172::1730785304::1730785305::1::::<><>::
 ::res://Art/Enemies/::1730534196
@@ -10,10 +11,12 @@ bad_guy.jpg::CompressedTexture2D::3021049399525619448::1730506463::1730508584::1
 Golem_Armor_Full.png::CompressedTexture2D::7143314282980200275::1730534195::1730534196::1::::<><>::
 Golem_Full.png::CompressedTexture2D::6868017233468616708::1730534148::1730534149::1::::<><>::
 icon.svg::CompressedTexture2D::977392187584609519::1730506463::1730508596::1::::<><>::
-::res://Art/Enemies/Enemy_Single_Golem_Reinforced/::1730785399
+::res://Art/Enemies/Enemy_Single_Golem_Reinforced/::1730967429
 Golem_Armor_Full.png::CompressedTexture2D::3425080698599161310::1730606918::1730606918::1::::<><>::
 imgonline-com-ua-twotoone-HzbCWJtkUIjQ2.png::CompressedTexture2D::454288619569056611::1730785399::1730785399::1::::<><>::
 imgonline-com-ua-twotoone-K1BbslHnwB6OG.jpg::CompressedTexture2D::7444080941274427326::1730785327::1730785328::1::::<><>::
+pixil-frame-0 (6).png::CompressedTexture2D::9152016804307964805::1730967272::1730967272::1::::<><>::
+pixil-frame-0 (7).png::CompressedTexture2D::8149732138125744144::1730967429::1730967429::1::::<><>::
 ::res://Art/Healthbar/::1730769832
 beer (1).png::CompressedTexture2D::890442648756655954::1730768786::1730768843::1::::<><>::
 beer (2).png::CompressedTexture2D::4537405073882725352::1730768786::1730768843::1::::<><>::
@@ -327,22 +330,25 @@ PlayerFall.gd::GDScript::-1::1730708431::0::1::::PlayerFall<>State<>::
 PlayerIdle.gd::GDScript::-1::1730709264::0::1::::PlayerIdle<>State<>::
 PlayerJump.gd::GDScript::-1::1730708431::0::1::::PlayerJump<>State<>::
 playerwalk.gd::GDScript::-1::1730713560::0::1::::PlayerWalk<>State<>::
-::res://Range Enemy Scripts/::1730800222
-Ranged_Enemy_Hit.gd::GDScript::-1::1730786827::0::1::::Ranged_Enemy_Hit<>State<>::
-Ranged_Enemy_Shoot.gd::GDScript::-1::1730786827::0::1::::Ranged_Enemy_Shoot<>State<>::
-Ranged_Enemy_Walk.gd::GDScript::-1::1730786827::0::1::::Ranged_Enemy_Walk<>State<>::
-Range_Enemy_Idle.gd::GDScript::-1::1730800129::0::1::::Ranged_Enemy_Idle<>State<>::
+::res://Projectile Scripts/::0
+::res://Range Enemy Scripts/::1730967350
+Ranged_Enemy_Hit.gd::GDScript::-1::1730859609::0::1::::Ranged_Enemy_Hit<>State<>::
+Ranged_Enemy_Idle.gd::GDScript::-1::1730966701::0::1::::Ranged_Enemy_Idle<>State<>::
+Ranged_Enemy_Shoot.gd::GDScript::-1::1730967350::0::1::::Ranged_Enemy_Shoot<>State<>::
+Ranged_Enemy_Walk.gd::GDScript::-1::1730966451::0::1::::Ranged_Enemy_Walk<>State<>::
+range_enemy.gd::GDScript::-1::1730859301::0::1::::<>CharacterBody2D<>::
 ::res://Small_Enemy_Scripts/::1730713872
 enemy.gd::GDScript::-1::1730708182::0::1::::Enemy<>CharacterBody2D<>::
 enemyfollow.gd::GDScript::-1::1730713560::0::1::::EnemyFollow<>State<>::
 EnemyHit.gd::GDScript::-1::1730713872::0::1::::EnemyHit<>State<>::
 EnemyIdle.gd::GDScript::-1::1730713635::0::1::::EnemyIdle<>State<>::
-::res://State logic/::1730508471
+::res://State logic/::1730803687
 State.gd::GDScript::-1::1730506463::0::1::::State<>Node<>::
-state_machine.gd::GDScript::-1::1730508335::0::1::::<>Node<>::
-::res://tscn/::1730800205
-arrow.tscn::PackedScene::8985600912468927446::1730800130::0::1::::<><>::res://Arrow Script/arrow.gd<>uid://lnc73aruj0cm::::res://Art/Player/Elementals_Leaf_ranger_Free_v1.0/animations/spritesheets/projectiles_and_effects_256x128_SpriteSheet.png
-enemy.tscn::PackedScene::4433944765821108305::1730800129::0::1::::<><>::res://Small_Enemy_Scripts/enemy.gd<>uid://c436if55ld8o3::::res://Art/Enemies/Golem_Full.png<>res://State logic/state_machine.gd<>res://Small_Enemy_Scripts/EnemyIdle.gd<>res://Small_Enemy_Scripts/enemyfollow.gd<>res://Small_Enemy_Scripts/EnemyHit.gd
-main.tscn::PackedScene::8946327994629951347::1730800129::0::1::::<><>::uid://b3qlfgh70iuqk::::res://Art/tileset/tileset.png<>uid://dbk6h0u8da2os::::res://tscn/player.tscn<>uid://b4f3omnm1ajj2::::res://tscn/enemy.tscn<>uid://dxvelshx3c4lr::::res://tscn/range_enemy.tscn
-player.tscn::PackedScene::7251990745074279594::1730800129::0::1::::<><>::res://Player Scripts/player.gd<>uid://b8bcvvl4l1fc2::::res://Art/tileset/Mountain-Dusk.png<>res://State logic/state_machine.gd<>uid://dtwatbnwnx7fk::::res://Art/Player/Elementals_Leaf_ranger_Free_v1.0/animations/spritesheets/Elementals_leaf_ranger_288x128_SpriteSheet.png<>res://Player Scripts/playerwalk.gd<>res://Player Scripts/PlayerJump.gd<>res://Player Scripts/PlayerIdle.gd<>res://Player Scripts/PlayerFall.gd<>res://Player Scripts/PlayerAttack.gd<>uid://dn7c4kewjniqf::::res://Art/Healthbar/pixil-frame-0 (31).png<>uid://cj5ntso3jkece::::res://Art/Healthbar/pixil-frame-0 (6).png<>uid://d1120wfm1i34r::::res://Art/Healthbar/pixil-frame-0 (7).png
-range_enemy.tscn::PackedScene::8817220856609801195::1730800205::0::1::::<><>::uid://gqccjw57wvip::::res://Art/Enemies/Enemy_Single_Golem_Reinforced/imgonline-com-ua-twotoone-HzbCWJtkUIjQ2.png<>res://State logic/state_machine.gd<>res://Range Enemy Scripts/Ranged_Enemy_Walk.gd<>res://Range Enemy Scripts/Ranged_Enemy_Hit.gd<>res://Range Enemy Scripts/Ranged_Enemy_Shoot.gd
+state_machine.gd::GDScript::-1::1730803687::0::1::::<>Node<>::
+::res://tscn/::1730967479
+arrow.tscn::PackedScene::8985600912468927446::1730967542::0::1::::<><>::res://Arrow Script/arrow.gd<>uid://lnc73aruj0cm::::res://Art/Player/Elementals_Leaf_ranger_Free_v1.0/animations/spritesheets/projectiles_and_effects_256x128_SpriteSheet.png
+enemy.tscn::PackedScene::4433944765821108305::1730967479::0::1::::<><>::res://Small_Enemy_Scripts/enemy.gd<>uid://c436if55ld8o3::::res://Art/Enemies/Golem_Full.png<>res://State logic/state_machine.gd<>res://Small_Enemy_Scripts/EnemyIdle.gd<>res://Small_Enemy_Scripts/enemyfollow.gd<>res://Small_Enemy_Scripts/EnemyHit.gd
+main.tscn::PackedScene::8946327994629951347::1730967479::0::1::::<><>::uid://b3qlfgh70iuqk::::res://Art/tileset/tileset.png<>uid://dbk6h0u8da2os::::res://tscn/player.tscn<>uid://b4f3omnm1ajj2::::res://tscn/enemy.tscn<>uid://dxvelshx3c4lr::::res://tscn/range_enemy.tscn<>uid://c8g1mh3ko7a2g::::res://tscn/bullet.tscn
+player.tscn::PackedScene::7251990745074279594::1730967479::0::1::::<><>::res://Player Scripts/player.gd<>uid://b8bcvvl4l1fc2::::res://Art/tileset/Mountain-Dusk.png<>res://State logic/state_machine.gd<>uid://dtwatbnwnx7fk::::res://Art/Player/Elementals_Leaf_ranger_Free_v1.0/animations/spritesheets/Elementals_leaf_ranger_288x128_SpriteSheet.png<>res://Player Scripts/playerwalk.gd<>res://Player Scripts/PlayerJump.gd<>res://Player Scripts/PlayerIdle.gd<>res://Player Scripts/PlayerFall.gd<>res://Player Scripts/PlayerAttack.gd<>uid://dn7c4kewjniqf::::res://Art/Healthbar/pixil-frame-0 (31).png<>uid://cj5ntso3jkece::::res://Art/Healthbar/pixil-frame-0 (6).png<>uid://d1120wfm1i34r::::res://Art/Healthbar/pixil-frame-0 (7).png
+range_enemy.tscn::PackedScene::8817220856609801195::1730967479::0::1::::<><>::res://Range Enemy Scripts/range_enemy.gd<>uid://gqccjw57wvip::::res://Art/Enemies/Enemy_Single_Golem_Reinforced/imgonline-com-ua-twotoone-HzbCWJtkUIjQ2.png<>res://State logic/state_machine.gd<>res://Range Enemy Scripts/Ranged_Enemy_Walk.gd<>res://Range Enemy Scripts/Ranged_Enemy_Idle.gd<>res://Range Enemy Scripts/Ranged_Enemy_Hit.gd<>res://Range Enemy Scripts/Ranged_Enemy_Shoot.gd
+bullet.tscn::PackedScene::7103059956696712508::1730967542::0::1::::<><>::res://Arrow Script/bullet.gd<>uid://dod15rwhqqwcu::::res://Art/Enemies/Enemy_Single_Golem_Reinforced/pixil-frame-0 (7).png

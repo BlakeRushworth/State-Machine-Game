@@ -213,11 +213,10 @@ texture_under = ExtResource("10_eptgh")
 texture_over = ExtResource("10_esi2t")
 texture_progress = ExtResource("11_5ccu7")
 
-[node name="Hitbox" type="Area2D" parent="."]
+[node name="Hitbox" type="Area2D" parent="." groups=["Player"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 position = Vector2(1, -11)
 shape = SubResource("CapsuleShape2D_hl7yt")
 
 [connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
-[connection signal="area_exited" from="Hitbox" to="." method="_on_hitbox_area_exited"]

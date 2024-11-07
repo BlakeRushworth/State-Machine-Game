@@ -24,6 +24,7 @@ func Enter():
 	animation_player = get_tree().get_first_node_in_group("ranged_animation")
 	#print(animation_player)
 	#print($"../../AnimationPlayer")
+
 func Update(delta: float):
 	if wander_time > 0:
 		wander_time -= delta
@@ -41,4 +42,12 @@ func Physics_Update(delta: float):
 	print(direction.length())
 	if direction.length() < 200:
 		print("Go to Chase, Blake!!")
-		Transitioned.emit(self, "Ranged_Enemy_Walk")
+		Transitioned.emit(self, "Walk")
+
+
+
+
+func _on_hitbox_area_entered(area):
+	if area.is_in_group("arrow"):
+		Transitioned.emit(self, "Hit")
+

@@ -16,7 +16,7 @@ func _physics_process(delta):
 	else:
 		$Sprite2D.flip_h = false
 	
-	#velocity.y += 200
+	velocity.y = 200
 	move_and_slide()
 
 func _ready():

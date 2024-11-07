@@ -16,14 +16,18 @@ func _physics_process(delta):
 		$Sprite2D.flip_h = false
 		dir = "right"
 		print("dir",dir)
-
-	check_hit()
+	
 	move_and_slide()
 
 
-func check_hit():
-	if touching_enemy == true and immune == false:
-		immune = true
+func dead():
+	pass
+
+func _on_hitbox_area_entered(area):
+	if area.is_in_group("enemy") or area.is_in_group("bullet"):
+		print("player hit")
+		if immune == false:
+			immune = true
 		$CanvasLayer/TextureProgressBar.value -= 10
 		if $CanvasLayer/TextureProgressBar.value < 27:
 			print("dead")
@@ -31,17 +35,4 @@ func check_hit():
 		await get_tree().create_timer(2).timeout
 		immune = false
 
-func dead():
-	pass
 
-func _on_hitbox_area_entered(area):
-	if area.is_in_group("enemy"):
-		print("player hit")
-		touching_enemy = true
-
-
-
-func _on_hitbox_area_exited(area):
-	if area.is_in_group("enemy"):
-		print("player hit")
-		touching_enemy = false

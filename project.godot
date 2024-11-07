@@ -18,9 +18,9 @@ config/icon="res://Art/Enemies/icon.svg"
 [file_customization]
 
 folder_colors={
-"res://Arrow Script/": "red",
 "res://Art/": "yellow",
 "res://Player Scripts/": "blue",
+"res://Projectile Scripts/": "red",
 "res://Range Enemy Scripts/": "green",
 "res://Small_Enemy_Scripts/": "orange",
 "res://State logic/": "teal"

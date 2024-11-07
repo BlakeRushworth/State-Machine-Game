@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://c8g1mh3ko7a2g"]
+
+[ext_resource type="Script" path="res://Projectile Scripts/bullet.gd" id="1_31mxf"]
+[ext_resource type="Texture2D" uid="uid://dod15rwhqqwcu" path="res://Art/Enemies/Enemy_Single_Golem_Reinforced/pixil-frame-0 (7).png" id="1_tacf6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6onoc"]
+size = Vector2(34.5, 27)
+
+[node name="Bullet" type="Area2D" groups=["bullet"]]
+script = ExtResource("1_31mxf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+texture_filter = 1
+position = Vector2(-1.375, -6)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_6onoc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_tacf6")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+position = Vector2(-1.5, -6)
+scale = Vector2(0.15, 0.6)
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenEnabler2D" to="." method="_on_visible_on_screen_enabler_2d_screen_exited"]
