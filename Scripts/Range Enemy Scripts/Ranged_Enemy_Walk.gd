@@ -11,20 +11,22 @@ var player: CharacterBody2D
 var soul
 
 func Enter():
-	print("emeny walk")
+	print("ranged_enemy_walk")
 	player = get_tree().get_first_node_in_group("Player")
 	animation_player = get_tree().get_first_node_in_group("ranged_animation")
 	soul = get_tree().get_first_node_in_group("soul")
 
 func Physics_Update(delta: float):
 	var direction = player.global_position - enemy.global_position
-	#print(float(direction.length()))
-	if soul:
+	
+	
+	if GlobalScript.am_visible == true and soul:
 		var dir_to_soul = soul.global_position - enemy.global_position
-		#print(dir_to_soul)
-		if dir_to_soul.length() < 50:
+		if dir_to_soul.length() < 100:
 			print("soul close")
 			Transitioned.emit(self, "Get_Soul")
+	
+	
 	if direction.length() < min_dist:
 		direction.x *= -1
 		enemy.velocity = direction.normalized() * move_speed

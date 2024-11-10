@@ -12,11 +12,11 @@ var Marker2d
 var animation_player
 var healthbar
 var cooldown := 1.6
-var once = false
+
 
 func Enter():
-	#print("attack")
-	#print(once)
+	player.attack_animation = true
+	print("player_attack_enter")
 	player.velocity.x = 0
 	animation_player = get_tree().get_first_node_in_group("animation_player")
 	Marker2d = get_tree().get_first_node_in_group("marker")
@@ -30,16 +30,7 @@ func Enter():
 
 
 func cooldown_done():
-	#print(once)
-	#print("attack done")
-	if Input.is_action_pressed("jump") and player.is_on_floor():
-		Transitioned.emit(self, "PlayerJump")
-	elif Input.is_action_pressed("move_left") or Input.is_action_pressed("move_right"):
-			Transitioned.emit(self, "PlayerWalk")
-	elif Input.is_action_pressed("attack"):
-		Transitioned.emit(self, "PlayerAttack")
-	else:
-		Transitioned.emit(self, "PlayerIdle")
+	Transitioned.emit(self, "PlayerNone")
 
 func shoot():
 	var arrow_dir
@@ -58,4 +49,4 @@ func shoot():
 
 
 func Exit():
-	once = false
+	print("player_attack_exit")

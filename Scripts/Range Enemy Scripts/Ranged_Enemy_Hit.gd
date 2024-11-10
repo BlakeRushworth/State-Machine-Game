@@ -12,13 +12,15 @@ var animation_player
 @export var health := 2
 
 func Enter():
-	print("enemy hit")
+	health = GlobalScript.range_enemy_health
+	print("ranged_enemy_hit")
 	enemy.velocity.x = 0
 	player = get_tree().get_first_node_in_group("Player")
 	animation_player = get_tree().get_first_node_in_group("ranged_animation")
 	
 	var direction = player.global_position - enemy.global_position
 	health -= 1
+	GlobalScript.range_enemy_health = health
 	if health <= 0:
 		animation_player.play("death")
 		await get_tree().create_timer(1.2).timeout

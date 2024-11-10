@@ -145,9 +145,9 @@ move_speed = 75.0
 script = ExtResource("6_65p83")
 enemy = NodePath("../..")
 
-[node name="Hitbox" type="Area2D" parent="." groups=["enemy"]]
+[node name="Hitbox" type="Area2D" parent="." groups=["damage", "enemy"]]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" groups=["damage", "enemy_hitbox"]]
 position = Vector2(-4, -7)
 shape = SubResource("RectangleShape2D_iqxnc")
 

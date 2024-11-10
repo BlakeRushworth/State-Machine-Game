@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="State Machine Elf Game"
-run/main_scene="res://tscn/main.tscn"
+run/main_scene="res://tscn/main_menu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://Art/Enemies/icon.svg"
+
+[autoload]
+
+GlobalScript="*res://Scripts/Miscellaneous Scripts/global_script.gd"
 
 [file_customization]
 

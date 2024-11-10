@@ -11,6 +11,7 @@ var bullet = preload("res://tscn/bullet.tscn")
 
 
 func Enter():
+	print("ranged_enemy_shoot")
 	enemy.velocity = Vector2()
 	player = get_tree().get_first_node_in_group("Player")
 	animation_player = get_tree().get_first_node_in_group("ranged_animation")

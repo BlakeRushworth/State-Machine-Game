@@ -172,6 +172,7 @@ enemy = NodePath("../..")
 [node name="Get_Soul" type="Node" parent="State_Machine" node_paths=PackedStringArray("enemy")]
 script = ExtResource("8_hsr7i")
 enemy = NodePath("../..")
+move_speed = 1.0
 
 [node name="Hitbox" type="Area2D" parent="." groups=["enemy", "ranged_enemy"]]
 

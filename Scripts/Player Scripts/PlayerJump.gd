@@ -31,7 +31,7 @@ func jump():
 
 
 func Enter():
-	#print("jump")
+	print("player_jump_enter")
 	jump()
 	animation_player = get_tree().get_first_node_in_group("animation_player")
 
@@ -44,14 +44,17 @@ func Physics_Update(_delta: float):
 	var direction = Input.get_vector("move_left","move_right","none","none").normalized()
 	player.velocity.x = direction.x * speed
 	
-	
-	if y_dir == "up":
-		animation_player.play("jumping")
-	else:
-		animation_player.play("falling")
-	
-	if player.is_on_floor():
+	if player.attack_animation == false:
+		if y_dir == "up":
+			animation_player.play("jumping")
+		else:
+			animation_player.play("falling")
+	if GlobalScript.player_dead == true:
+		Transitioned.emit(self, "PlayerDeath")
+	elif player.is_on_floor():
 		if player.velocity.x != 0:
 			Transitioned.emit(self, "PlayerWalk")
 		else:
 			Transitioned.emit(self, "PlayerIdle")
+func Exit():
+	print("player_jump_exit")

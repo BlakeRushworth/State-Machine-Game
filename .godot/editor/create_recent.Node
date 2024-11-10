@@ -1,3 +1,9 @@
+Control
+Button
+Label
+TextEdit
+VBoxContainer
+HBoxContainer
 Node
 Marker2D
 AnimationPlayer
@@ -7,8 +13,3 @@ Area2D
 AudioStreamPlayer
 AudioStreamPlayer2D
 VisibleOnScreenEnabler2D
-CharacterBody2D
-CanvasLayer
-TextureProgressBar
-VisibleOnScreenNotifier2D
-Camera2D

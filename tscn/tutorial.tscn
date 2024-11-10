@@ -1,0 +1,106 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6ek7pq1passt"]
+
+[ext_resource type="Script" path="res://Scripts/Miscellaneous Scripts/Tutorial.gd" id="1_khnxh"]
+[ext_resource type="Texture2D" uid="uid://bi83rdybbcscu" path="res://Art/tileset/2el0y62ig1u61.png" id="2_3o5c2"]
+[ext_resource type="Texture2D" uid="uid://dtwatbnwnx7fk" path="res://Art/Player/Elementals_Leaf_ranger_Free_v1.0/animations/spritesheets/Elementals_leaf_ranger_288x128_SpriteSheet.png" id="3_nnrb3"]
+
+[node name="Tutorial" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_khnxh")
+
+[node name="2El0y62Ig1u61" type="Sprite2D" parent="."]
+position = Vector2(581, 336)
+texture = ExtResource("2_3o5c2")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -22.5
+offset_top = -40.0
+offset_right = 22.5
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Back"
+
+[node name="ElementalsLeafRanger288x128SpriteSheet" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(205, 18)
+scale = Vector2(3, 3)
+texture = ExtResource("3_nnrb3")
+hframes = 22
+vframes = 17
+frame = 22
+
+[node name="ElementalsLeafRanger288x128SpriteSheet2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(901, 38)
+scale = Vector2(3, 3)
+texture = ExtResource("3_nnrb3")
+hframes = 22
+vframes = 17
+frame = 246
+
+[node name="ElementalsLeafRanger288x128SpriteSheet3" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(190, 370)
+scale = Vector2(3, 3)
+texture = ExtResource("3_nnrb3")
+hframes = 22
+vframes = 17
+frame = 142
+
+[node name="ElementalsLeafRanger288x128SpriteSheet4" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(891, 351)
+scale = Vector2(3, 3)
+texture = ExtResource("3_nnrb3")
+hframes = 22
+vframes = 17
+frame = 359
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 843.0
+offset_top = 239.0
+offset_right = 964.0
+offset_bottom = 268.0
+text = "Left click to shoot"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 143.0
+offset_top = 220.0
+offset_right = 264.0
+offset_bottom = 249.0
+text = "A and D to walk"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 826.0
+offset_top = 552.0
+offset_right = 1003.0
+offset_bottom = 601.0
+text = "You die if you lose all 
+your live (dont do that)"
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 168.0
+offset_top = 547.0
+offset_right = 305.0
+offset_bottom = 576.0
+text = "W to jump"
+
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

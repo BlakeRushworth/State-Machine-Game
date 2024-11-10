@@ -55,7 +55,7 @@ libraries = {
 "": SubResource("AnimationLibrary_4qyfu")
 }
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." groups=["soul_sprite"]]
 texture_filter = 1
 scale = Vector2(2, 2)
 texture = ExtResource("1_gpx3k")

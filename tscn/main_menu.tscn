@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=3 uid="uid://bk1l7nxcbiic2"]
+
+[ext_resource type="Script" path="res://Scripts/Miscellaneous Scripts/Main_Menu.gd" id="1_fbx6b"]
+[ext_resource type="Texture2D" uid="uid://ekke51887o7l" path="res://Art/tileset/example.png" id="2_s832u"]
+
+[node name="Main_Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fbx6b")
+
+[node name="Example" type="Sprite2D" parent="."]
+position = Vector2(572, 304)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_s832u")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -47.5
+offset_top = -20.0
+offset_right = 47.5
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Start" type="Button" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Start Game"
+
+[node name="Tutorial" type="Button" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Tutorial
+"
+
+[node name="Quit" type="Button" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Quit Game
+"
+
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Tutorial" to="." method="_on_tutorial_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
