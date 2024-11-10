@@ -1,11 +1,11 @@
 [gd_scene load_steps=15 format=3 uid="uid://b4f3omnm1ajj2"]
 
-[ext_resource type="Script" path="res://Small_Enemy_Scripts/enemy.gd" id="1_eg1k5"]
+[ext_resource type="Script" path="res://Scripts/Small_Enemy_Scripts/enemy.gd" id="1_eg1k5"]
 [ext_resource type="Texture2D" uid="uid://c436if55ld8o3" path="res://Art/Enemies/Golem_Full.png" id="2_e04bk"]
 [ext_resource type="Script" path="res://State logic/state_machine.gd" id="3_68xh4"]
-[ext_resource type="Script" path="res://Small_Enemy_Scripts/EnemyIdle.gd" id="4_446xr"]
-[ext_resource type="Script" path="res://Small_Enemy_Scripts/enemyfollow.gd" id="5_lwiwj"]
-[ext_resource type="Script" path="res://Small_Enemy_Scripts/EnemyHit.gd" id="6_65p83"]
+[ext_resource type="Script" path="res://Scripts/Small_Enemy_Scripts/EnemyIdle.gd" id="4_446xr"]
+[ext_resource type="Script" path="res://Scripts/Small_Enemy_Scripts/enemyfollow.gd" id="5_lwiwj"]
+[ext_resource type="Script" path="res://Scripts/Small_Enemy_Scripts/EnemyHit.gd" id="6_65p83"]
 
 [sub_resource type="Animation" id="Animation_mybma"]
 length = 0.001
@@ -105,6 +105,8 @@ size = Vector2(139, 131)
 size = Vector2(50, 48)
 
 [node name="Enemy" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 4
 script = ExtResource("1_eg1k5")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." groups=["animation"]]
@@ -148,6 +150,11 @@ enemy = NodePath("../..")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 position = Vector2(-4, -7)
 shape = SubResource("RectangleShape2D_iqxnc")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="Marker2D" type="Marker2D" parent="." groups=["soul_marker"]]
+position = Vector2(-9, -14)
 
 [connection signal="area_entered" from="Hitbox" to="State_Machine/EnemyIdle" method="_on_hitbox_area_entered"]
 [connection signal="area_entered" from="Hitbox" to="State_Machine/EnemyFollow" method="_on_hitbox_area_entered"]

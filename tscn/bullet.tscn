@@ -1,13 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://c8g1mh3ko7a2g"]
 
-[ext_resource type="Script" path="res://Projectile Scripts/bullet.gd" id="1_31mxf"]
+[ext_resource type="Script" path="res://Scripts/Projectile Scripts/bullet.gd" id="1_mjte3"]
 [ext_resource type="Texture2D" uid="uid://dod15rwhqqwcu" path="res://Art/Enemies/Enemy_Single_Golem_Reinforced/pixil-frame-0 (7).png" id="1_tacf6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6onoc"]
 size = Vector2(34.5, 27)
 
 [node name="Bullet" type="Area2D" groups=["bullet"]]
-script = ExtResource("1_31mxf")
+script = ExtResource("1_mjte3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 texture_filter = 1

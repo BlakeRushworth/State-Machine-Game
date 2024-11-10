@@ -1,12 +1,14 @@
-[gd_scene load_steps=17 format=3 uid="uid://dxvelshx3c4lr"]
+[gd_scene load_steps=19 format=3 uid="uid://dxvelshx3c4lr"]
 
-[ext_resource type="Script" path="res://Range Enemy Scripts/range_enemy.gd" id="1_f7yt2"]
+[ext_resource type="Script" path="res://Scripts/Range Enemy Scripts/range_enemy.gd" id="1_f7yt2"]
 [ext_resource type="Texture2D" uid="uid://gqccjw57wvip" path="res://Art/Enemies/Enemy_Single_Golem_Reinforced/imgonline-com-ua-twotoone-HzbCWJtkUIjQ2.png" id="1_yod5q"]
 [ext_resource type="Script" path="res://State logic/state_machine.gd" id="2_moi5s"]
-[ext_resource type="Script" path="res://Range Enemy Scripts/Ranged_Enemy_Walk.gd" id="3_323gg"]
-[ext_resource type="Script" path="res://Range Enemy Scripts/Ranged_Enemy_Idle.gd" id="4_2040e"]
-[ext_resource type="Script" path="res://Range Enemy Scripts/Ranged_Enemy_Hit.gd" id="5_ipu0e"]
-[ext_resource type="Script" path="res://Range Enemy Scripts/Ranged_Enemy_Shoot.gd" id="6_junl4"]
+[ext_resource type="Script" path="res://Scripts/Range Enemy Scripts/Ranged_Enemy_Walk.gd" id="3_323gg"]
+[ext_resource type="Script" path="res://Scripts/Range Enemy Scripts/Ranged_Enemy_Idle.gd" id="4_2040e"]
+[ext_resource type="Script" path="res://Scripts/Range Enemy Scripts/Ranged_Enemy_Hit.gd" id="5_ipu0e"]
+[ext_resource type="Script" path="res://Scripts/Range Enemy Scripts/Ranged_Enemy_Shoot.gd" id="6_junl4"]
+[ext_resource type="AudioStream" uid="uid://b2xl6quh5sr17" path="res://music/mixkit-laser-game-whip-1514.wav" id="8_ebgvw"]
+[ext_resource type="Script" path="res://Scripts/Range Enemy Scripts/Ranged_Enemy_Get_Soul.gd" id="8_hsr7i"]
 
 [sub_resource type="Animation" id="Animation_xot1m"]
 length = 0.001
@@ -124,6 +126,8 @@ size = Vector2(25, 25)
 size = Vector2(25, 25)
 
 [node name="Range_Enemy" type="CharacterBody2D" node_paths=PackedStringArray("enemy")]
+collision_layer = 2
+collision_mask = 4
 script = ExtResource("1_f7yt2")
 enemy = NodePath(".")
 
@@ -165,7 +169,11 @@ enemy = NodePath("../..")
 script = ExtResource("6_junl4")
 enemy = NodePath("../..")
 
-[node name="Hitbox" type="Area2D" parent="." groups=["enemy"]]
+[node name="Get_Soul" type="Node" parent="State_Machine" node_paths=PackedStringArray("enemy")]
+script = ExtResource("8_hsr7i")
+enemy = NodePath("../..")
+
+[node name="Hitbox" type="Area2D" parent="." groups=["enemy", "ranged_enemy"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 position = Vector2(0.5, 1.5)
@@ -174,6 +182,10 @@ shape = SubResource("RectangleShape2D_8a7ml")
 [node name="Marker2D" type="Marker2D" parent="." groups=["enemy_marker"]]
 position = Vector2(2, -2)
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." groups=["shoot_sound"]]
+stream = ExtResource("8_ebgvw")
+
 [connection signal="area_entered" from="Hitbox" to="State_Machine/Idle" method="_on_hitbox_area_entered"]
 [connection signal="area_entered" from="Hitbox" to="State_Machine/Walk" method="_on_hitbox_area_entered"]
 [connection signal="area_entered" from="Hitbox" to="State_Machine/Shoot" method="_on_hitbox_area_entered"]
+[connection signal="area_entered" from="Hitbox" to="State_Machine/Get_Soul" method="_on_hitbox_area_entered"]

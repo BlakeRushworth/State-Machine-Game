@@ -19,10 +19,12 @@ config/icon="res://Art/Enemies/icon.svg"
 
 folder_colors={
 "res://Art/": "yellow",
-"res://Player Scripts/": "blue",
-"res://Projectile Scripts/": "red",
-"res://Range Enemy Scripts/": "green",
-"res://Small_Enemy_Scripts/": "orange",
+"res://Scripts/Miscellaneous Scripts/": "pink",
+"res://Scripts/Player Scripts/": "blue",
+"res://Scripts/Projectile Scripts/": "red",
+"res://Scripts/Range Enemy Scripts/": "green",
+"res://Scripts/Small_Enemy_Scripts/": "orange",
+"res://Scripts/Soul Scripts/": "yellow",
 "res://State logic/": "teal"
 }
 

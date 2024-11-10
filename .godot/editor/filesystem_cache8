@@ -1,10 +1,7 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1730961244
+::res://::1731192434
 README.md::TextFile::-1::1730528311::0::1::::<><>::
-::res://Arrow Script/::1730859080
-arrow.gd::GDScript::-1::1730859080::0::1::::<>Area2D<>::
-bullet.gd::GDScript::-1::1730967528::0::1::::<>Area2D<>::
-::res://Art/::1730785305
+::res://Art/::1731119532
 imgonline-com-ua-twotoone-K1BbslHnwB6OG.jpg::CompressedTexture2D::1826142414611840172::1730785304::1730785305::1::::<><>::
 ::res://Art/Enemies/::1730534196
 bad_guy.jpg::CompressedTexture2D::3021049399525619448::1730506463::1730508584::1::::<><>::
@@ -36,6 +33,12 @@ redblue (3).png::CompressedTexture2D::1930304693066877136::1730768786::173076884
 rpg (1).png::CompressedTexture2D::7357395433919459603::1730768786::1730768843::1::::<><>::
 rpg (2).png::CompressedTexture2D::2763990154441552474::1730768786::1730768843::1::::<><>::
 rpg (3).png::CompressedTexture2D::776420995411110363::1730768786::1730768843::1::::<><>::
+::res://Art/Pebble/::1731119532
+Pebble_Death.png::CompressedTexture2D::5050129211422775545::1731119532::1731119532::1::::<><>::
+Pebble_Full.png::CompressedTexture2D::841989284615152697::1731119532::1731119532::1::::<><>::
+Pebble_Hit.png::CompressedTexture2D::3643738622110806644::1731119532::1731119532::1::::<><>::
+Pebble_Idle.png::CompressedTexture2D::3352999605535648358::1731119532::1731119532::1::::<><>::
+Pebble_Run.png::CompressedTexture2D::3767945201065069803::1731119532::1731119532::1::::<><>::
 ::res://Art/Player/::1730510596
 ::res://Art/Player/Elementals_Leaf_ranger_Free_v1.0/::1730510597
 leaf_ranger.png::CompressedTexture2D::2658647735547613241::1730510591::1730510597::1::::<><>::
@@ -323,32 +326,47 @@ example.png::CompressedTexture2D::302015082606173747::1730510128::1730510131::1:
 Mountain-Dusk.png::CompressedTexture2D::4704876958476321619::1730521292::1730521296::1::::<><>::
 pixel-art-forest-background-seamless-600nw-2501937379.webp::CompressedTexture2D::1827887485818115872::1730520763::1730520769::1::::<><>::
 tileset.png::CompressedTexture2D::4385415492954331658::1730510098::1730510133::1::::<><>::
-::res://Player Scripts/::1730771349
-player.gd::GDScript::-1::1730771349::0::1::::<>CharacterBody2D<>::
-PlayerAttack.gd::GDScript::-1::1730770743::0::1::::PlayerAttack<>State<>::
+::res://music/::1731019893
+03. E1M1 - At Doom's Gate.mp3::AudioStreamMP3::3891132988861690872::1731019043::1731019046::1::::<><>::
+mixkit-laser-game-whip-1514.wav::AudioStreamWAV::4329724268423389864::1731019893::1731019893::1::::<><>::
+video-game-boss-fiight-259885.mp3::AudioStreamMP3::4880678664737041851::1731019311::1731019311::1::::<><>::
+::res://Scripts/::1731130583
+::res://Scripts/Miscellaneous Scripts/::1731120277
+main.gd::GDScript::-1::1731019552::0::1::::<>Node2D<>::
+::res://Scripts/Player Scripts/::1731136851
+player.gd::GDScript::-1::1731136851::0::1::::<>CharacterBody2D<>::
+PlayerAttack.gd::GDScript::-1::1730968342::0::1::::PlayerAttack<>State<>::
 PlayerFall.gd::GDScript::-1::1730708431::0::1::::PlayerFall<>State<>::
 PlayerIdle.gd::GDScript::-1::1730709264::0::1::::PlayerIdle<>State<>::
 PlayerJump.gd::GDScript::-1::1730708431::0::1::::PlayerJump<>State<>::
 playerwalk.gd::GDScript::-1::1730713560::0::1::::PlayerWalk<>State<>::
-::res://Projectile Scripts/::0
-::res://Range Enemy Scripts/::1730967350
+::res://Scripts/Projectile Scripts/::1730969281
+arrow.gd::GDScript::-1::1730859080::0::1::::<>Area2D<>::
+bullet.gd::GDScript::-1::1730969281::0::1::::<>Area2D<>::
+::res://Scripts/Range Enemy Scripts/::1731136726
+Ranged_Enemy_Get_Soul.gd::GDScript::-1::1731136726::0::1::::Get_Soul<>State<>::
 Ranged_Enemy_Hit.gd::GDScript::-1::1730859609::0::1::::Ranged_Enemy_Hit<>State<>::
-Ranged_Enemy_Idle.gd::GDScript::-1::1730966701::0::1::::Ranged_Enemy_Idle<>State<>::
-Ranged_Enemy_Shoot.gd::GDScript::-1::1730967350::0::1::::Ranged_Enemy_Shoot<>State<>::
-Ranged_Enemy_Walk.gd::GDScript::-1::1730966451::0::1::::Ranged_Enemy_Walk<>State<>::
-range_enemy.gd::GDScript::-1::1730859301::0::1::::<>CharacterBody2D<>::
-::res://Small_Enemy_Scripts/::1730713872
-enemy.gd::GDScript::-1::1730708182::0::1::::Enemy<>CharacterBody2D<>::
+Ranged_Enemy_Idle.gd::GDScript::-1::1731130092::0::1::::Ranged_Enemy_Idle<>State<>::
+Ranged_Enemy_Shoot.gd::GDScript::-1::1731020054::0::1::::Ranged_Enemy_Shoot<>State<>::
+Ranged_Enemy_Walk.gd::GDScript::-1::1731134108::0::1::::Ranged_Enemy_Walk<>State<>::
+range_enemy.gd::GDScript::-1::1731130000::0::1::::<>CharacterBody2D<>::
+::res://Scripts/Small_Enemy_Scripts/::1731125145
+enemy.gd::GDScript::-1::1731019947::0::1::::Enemy<>CharacterBody2D<>::
 enemyfollow.gd::GDScript::-1::1730713560::0::1::::EnemyFollow<>State<>::
-EnemyHit.gd::GDScript::-1::1730713872::0::1::::EnemyHit<>State<>::
+EnemyHit.gd::GDScript::-1::1731125145::0::1::::EnemyHit<>State<>::
 EnemyIdle.gd::GDScript::-1::1730713635::0::1::::EnemyIdle<>State<>::
+::res://Scripts/Soul Scripts/::1731136283
+Absorb.gd::GDScript::-1::1731120137::0::1::::<>Node<>::
+soul.gd::GDScript::-1::1731136283::0::1::::<>Area2D<>::
+Spin.gd::GDScript::-1::1731120127::0::1::::<>Node<>::
 ::res://State logic/::1730803687
 State.gd::GDScript::-1::1730506463::0::1::::State<>Node<>::
 state_machine.gd::GDScript::-1::1730803687::0::1::::<>Node<>::
-::res://tscn/::1730967479
-arrow.tscn::PackedScene::8985600912468927446::1730967542::0::1::::<><>::res://Arrow Script/arrow.gd<>uid://lnc73aruj0cm::::res://Art/Player/Elementals_Leaf_ranger_Free_v1.0/animations/spritesheets/projectiles_and_effects_256x128_SpriteSheet.png
-enemy.tscn::PackedScene::4433944765821108305::1730967479::0::1::::<><>::res://Small_Enemy_Scripts/enemy.gd<>uid://c436if55ld8o3::::res://Art/Enemies/Golem_Full.png<>res://State logic/state_machine.gd<>res://Small_Enemy_Scripts/EnemyIdle.gd<>res://Small_Enemy_Scripts/enemyfollow.gd<>res://Small_Enemy_Scripts/EnemyHit.gd
-main.tscn::PackedScene::8946327994629951347::1730967479::0::1::::<><>::uid://b3qlfgh70iuqk::::res://Art/tileset/tileset.png<>uid://dbk6h0u8da2os::::res://tscn/player.tscn<>uid://b4f3omnm1ajj2::::res://tscn/enemy.tscn<>uid://dxvelshx3c4lr::::res://tscn/range_enemy.tscn<>uid://c8g1mh3ko7a2g::::res://tscn/bullet.tscn
-player.tscn::PackedScene::7251990745074279594::1730967479::0::1::::<><>::res://Player Scripts/player.gd<>uid://b8bcvvl4l1fc2::::res://Art/tileset/Mountain-Dusk.png<>res://State logic/state_machine.gd<>uid://dtwatbnwnx7fk::::res://Art/Player/Elementals_Leaf_ranger_Free_v1.0/animations/spritesheets/Elementals_leaf_ranger_288x128_SpriteSheet.png<>res://Player Scripts/playerwalk.gd<>res://Player Scripts/PlayerJump.gd<>res://Player Scripts/PlayerIdle.gd<>res://Player Scripts/PlayerFall.gd<>res://Player Scripts/PlayerAttack.gd<>uid://dn7c4kewjniqf::::res://Art/Healthbar/pixil-frame-0 (31).png<>uid://cj5ntso3jkece::::res://Art/Healthbar/pixil-frame-0 (6).png<>uid://d1120wfm1i34r::::res://Art/Healthbar/pixil-frame-0 (7).png
-range_enemy.tscn::PackedScene::8817220856609801195::1730967479::0::1::::<><>::res://Range Enemy Scripts/range_enemy.gd<>uid://gqccjw57wvip::::res://Art/Enemies/Enemy_Single_Golem_Reinforced/imgonline-com-ua-twotoone-HzbCWJtkUIjQ2.png<>res://State logic/state_machine.gd<>res://Range Enemy Scripts/Ranged_Enemy_Walk.gd<>res://Range Enemy Scripts/Ranged_Enemy_Idle.gd<>res://Range Enemy Scripts/Ranged_Enemy_Hit.gd<>res://Range Enemy Scripts/Ranged_Enemy_Shoot.gd
-bullet.tscn::PackedScene::7103059956696712508::1730967542::0::1::::<><>::res://Arrow Script/bullet.gd<>uid://dod15rwhqqwcu::::res://Art/Enemies/Enemy_Single_Golem_Reinforced/pixil-frame-0 (7).png
+::res://tscn/::1731141908
+arrow.tscn::PackedScene::8985600912468927446::1731141908::0::1::::<><>::uid://lnc73aruj0cm::::res://Art/Player/Elementals_Leaf_ranger_Free_v1.0/animations/spritesheets/projectiles_and_effects_256x128_SpriteSheet.png<>res://Scripts/Projectile Scripts/arrow.gd
+bullet.tscn::PackedScene::7103059956696712508::1731141908::0::1::::<><>::res://Scripts/Projectile Scripts/bullet.gd<>uid://dod15rwhqqwcu::::res://Art/Enemies/Enemy_Single_Golem_Reinforced/pixil-frame-0 (7).png
+enemy.tscn::PackedScene::4433944765821108305::1731141908::0::1::::<><>::res://Scripts/Small_Enemy_Scripts/enemy.gd<>uid://c436if55ld8o3::::res://Art/Enemies/Golem_Full.png<>res://State logic/state_machine.gd<>res://Scripts/Small_Enemy_Scripts/EnemyIdle.gd<>res://Scripts/Small_Enemy_Scripts/enemyfollow.gd<>res://Scripts/Small_Enemy_Scripts/EnemyHit.gd
+main.tscn::PackedScene::8946327994629951347::1731141908::0::1::::<><>::uid://b3qlfgh70iuqk::::res://Art/tileset/tileset.png<>res://Scripts/Miscellaneous Scripts/main.gd<>uid://dbk6h0u8da2os::::res://tscn/player.tscn<>uid://b4f3omnm1ajj2::::res://tscn/enemy.tscn<>uid://dxvelshx3c4lr::::res://tscn/range_enemy.tscn<>uid://cbsicgumvh7m2::::res://music/video-game-boss-fiight-259885.mp3
+player.tscn::PackedScene::7251990745074279594::1731141908::0::1::::<><>::res://Scripts/Player Scripts/player.gd<>uid://b8bcvvl4l1fc2::::res://Art/tileset/Mountain-Dusk.png<>res://State logic/state_machine.gd<>uid://dtwatbnwnx7fk::::res://Art/Player/Elementals_Leaf_ranger_Free_v1.0/animations/spritesheets/Elementals_leaf_ranger_288x128_SpriteSheet.png<>res://Scripts/Player Scripts/playerwalk.gd<>res://Scripts/Player Scripts/PlayerJump.gd<>res://Scripts/Player Scripts/PlayerIdle.gd<>res://Scripts/Player Scripts/PlayerFall.gd<>res://Scripts/Player Scripts/PlayerAttack.gd<>uid://dn7c4kewjniqf::::res://Art/Healthbar/pixil-frame-0 (31).png<>uid://cj5ntso3jkece::::res://Art/Healthbar/pixil-frame-0 (6).png<>uid://d1120wfm1i34r::::res://Art/Healthbar/pixil-frame-0 (7).png
+range_enemy.tscn::PackedScene::8817220856609801195::1731141908::0::1::::<><>::res://Scripts/Range Enemy Scripts/range_enemy.gd<>uid://gqccjw57wvip::::res://Art/Enemies/Enemy_Single_Golem_Reinforced/imgonline-com-ua-twotoone-HzbCWJtkUIjQ2.png<>res://State logic/state_machine.gd<>res://Scripts/Range Enemy Scripts/Ranged_Enemy_Walk.gd<>res://Scripts/Range Enemy Scripts/Ranged_Enemy_Idle.gd<>res://Scripts/Range Enemy Scripts/Ranged_Enemy_Hit.gd<>res://Scripts/Range Enemy Scripts/Ranged_Enemy_Shoot.gd<>uid://b2xl6quh5sr17::::res://music/mixkit-laser-game-whip-1514.wav<>res://Scripts/Range Enemy Scripts/Ranged_Enemy_Get_Soul.gd
+soul.tscn::PackedScene::5038354331226969862::1731141908::0::1::::<><>::uid://l84o8hp6t7tl::::res://Art/Pebble/Pebble_Full.png<>res://Scripts/Soul Scripts/soul.gd<>res://State logic/state_machine.gd<>res://Scripts/Soul Scripts/Spin.gd<>res://Scripts/Soul Scripts/Absorb.gd

@@ -1,13 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://d1axsfs2ud4uc"]
 
-[ext_resource type="Script" path="res://Projectile Scripts/arrow.gd" id="1_vjd0l"]
 [ext_resource type="Texture2D" uid="uid://lnc73aruj0cm" path="res://Art/Player/Elementals_Leaf_ranger_Free_v1.0/animations/spritesheets/projectiles_and_effects_256x128_SpriteSheet.png" id="1_vwn7y"]
+[ext_resource type="Script" path="res://Scripts/Projectile Scripts/arrow.gd" id="1_y3k3u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bf0wk"]
 size = Vector2(130, 20)
 
 [node name="Arrow" type="Area2D" groups=["arrow"]]
-script = ExtResource("1_vjd0l")
+script = ExtResource("1_y3k3u")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1

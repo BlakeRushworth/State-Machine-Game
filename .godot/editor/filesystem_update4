@@ -1,14 +1,7 @@
-res://tscn/range_enemy.tscn
-res://Range Enemy Scripts/Ranged_Enemy_Walk.gd
 res://tscn/main.tscn
 res://tscn/player.tscn
 res://tscn/enemy.tscn
 res://tscn/arrow.tscn
-res://Range Enemy Scripts/Ranged_Enemy_Shoot.gd
-res://Range Enemy Scripts/Ranged_Enemy_Idle.gd
+res://tscn/range_enemy.tscn
 res://tscn/bullet.tscn
-res://Projectile Scripts/bullet.gd
-res://Player Scripts/PlayerAttack.gd
-res://Range Enemy Scripts/range_enemy.gd
-res://Player Scripts/player.gd
-res://Small_Enemy_Scripts/enemy.gd
+res://tscn/soul.tscn

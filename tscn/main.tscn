@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://d0pwyksh2gohn"]
+[gd_scene load_steps=9 format=3 uid="uid://d0pwyksh2gohn"]
 
 [ext_resource type="Texture2D" uid="uid://b3qlfgh70iuqk" path="res://Art/tileset/tileset.png" id="1_65t0q"]
+[ext_resource type="Script" path="res://Scripts/Miscellaneous Scripts/main.gd" id="1_jffw2"]
 [ext_resource type="PackedScene" uid="uid://dbk6h0u8da2os" path="res://tscn/player.tscn" id="1_wg32c"]
 [ext_resource type="PackedScene" uid="uid://b4f3omnm1ajj2" path="res://tscn/enemy.tscn" id="2_aulj7"]
 [ext_resource type="PackedScene" uid="uid://dxvelshx3c4lr" path="res://tscn/range_enemy.tscn" id="4_m7x26"]
+[ext_resource type="AudioStream" uid="uid://cbsicgumvh7m2" path="res://music/video-game-boss-fiight-259885.mp3" id="5_ba5av"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v6gf2"]
 texture = ExtResource("1_65t0q")
@@ -459,10 +461,12 @@ texture = ExtResource("1_65t0q")
 9:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSet" id="TileSet_qqh51"]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 7
+physics_layer_0/collision_mask = 7
 sources/0 = SubResource("TileSetAtlasSource_v6gf2")
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_jffw2")
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
@@ -485,3 +489,7 @@ position = Vector2(437, 289)
 
 [node name="Range_Enemy" parent="Enemies" instance=ExtResource("4_m7x26")]
 position = Vector2(222, 281)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_ba5av")
+autoplay = true

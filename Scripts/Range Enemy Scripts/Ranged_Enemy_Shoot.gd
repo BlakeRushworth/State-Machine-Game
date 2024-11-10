@@ -5,6 +5,7 @@ class_name Ranged_Enemy_Shoot
 var player
 var animation_player
 var Marker2d
+var shoot_sound
 var bullet = preload("res://tscn/bullet.tscn")
 
 
@@ -14,9 +15,11 @@ func Enter():
 	player = get_tree().get_first_node_in_group("Player")
 	animation_player = get_tree().get_first_node_in_group("ranged_animation")
 	Marker2d = get_tree().get_first_node_in_group("enemy_marker")
+	shoot_sound = get_tree().get_first_node_in_group("shoot_sound")
 	
 	animation_player.play("shoot")
 	await get_tree().create_timer(0.5).timeout
+	shoot_sound.play()
 	shoot()
 	await get_tree().create_timer(0.5).timeout
 	#animation_player.play("idle")
